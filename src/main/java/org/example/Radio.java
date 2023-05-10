@@ -4,14 +4,15 @@ public class Radio {
     private int currentVolume;
     private int station;
     private int stationNumber = 10;
-public  Radio(){
 
-}
-    public Radio( int stationNumber) {
-        this.stationNumber =stationNumber;
+    public Radio() {
 
     }
 
+    public Radio(int stationNumber) {
+        this.stationNumber = stationNumber;
+
+    }
 
 
     public int getCurrentVolume() {
@@ -24,9 +25,8 @@ public  Radio(){
     }
 
 
-
     public void setStation(int newStation) {
-        if (newStation > stationNumber -1) {
+        if (newStation > stationNumber - 1) {
             return;
         }
         if (newStation < 0) {
@@ -60,7 +60,7 @@ public  Radio(){
     }
 
     public void nextStation() {
-        if (station == stationNumber -1) {
+        if (station == stationNumber - 1) {
             setStation(0);
         } else {
             station++;
